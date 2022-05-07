@@ -1,3 +1,5 @@
+#Voter information module
+
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 import java.util.InputMismatchException;
@@ -60,3 +62,64 @@ System.out.println(&quot;Enter correct Password&quot;);
 output.close();
 }
 }
+
+#Candidatesinformationmodule
+
+import java.util.Scanner;
+class Admin{ int xcount=0,ycount=0,zcount=0; int choice,j,t; void voting(){ 
+ 
+Scanner in=new Scanner(System.in); 
+ 
+User u=new User(); 
+System.out.println("*********************************************"); 
+System.out.println("---------------Select your choice to vote the desired Party------------"); 
+System.out.println("*********************************************"); 
+System.out.println("            -------------Menu---------------        "); 
+System.out.println("            1.x-## \n                               "); 
+System.out.println("            2.y-@@ \n                              "); System.out.println("            3.z-**                                  "); try{ choice=in.nextInt(); 
+} 
+catch(Exception e){ 
+System.out.println("Enter only numbers"); 
+} switch(choice){ case 1: xcount++; break; case 2: ycount++; break; case 3: zcount++; break; 
+} }
+
+#Polled Votes and Unpolled Votes Module:
+t=xcount+ycount+zcount; 
+System.out.println("x= "+xcount+"y= "+ycount+"z= "+zcount); System.out.println("Total no.of votes polled= "+t);
+           System.out.println("Total no.of votes unpolled= "+(n-t));
+            if(xcount>ycount&&xcount>zcount){ 
+System.out.println("*********************************************"); 
+System.out.println("X is the winner with the votes "+xcount); 
+System.out.println("*********************************************"); 
+} 
+else if(ycount>xcount && ycount>zcount){ 
+System.out.println("*********************************************"); 
+System.out.println("Y is the winner with the votes "+ycount); 
+System.out.println("*********************************************"); 
+} 
+else if(zcount>xcount && zcount>ycount){ 
+System.out.println("*********************************************"); 
+System.out.println("Z is the winner with the votes "+zcount); 
+System.out.println("*********************************************"); 
+} 
+else if(xcount==ycount||ycount==zcount||zcount==xcount){ 
+System.out.println("*********************************************"); 
+System.out.println("parties are tie "+xcount+ycount+zcount); 
+System.out.println("*********************************************"); 
+} 
+ 
+} 
+} 
+#MAIN CLASS: 
+import java.util.Scanner; class class Prodemo{ 
+public static void main(String args[]) throws Exception{ String name; int password; 
+Scanner in =new Scanner(System.in); int i; 
+Login l=new Login(); 
+User u=new User(); 
+Admin A=new Admin(); 
+System.out.println("*********************************************"); 
+System.out.println("-------- Login to participate in voting---------"); 
+System.out.println("*********************************************"); u.registration(); 
+//A.result(); 
+} 
+} 

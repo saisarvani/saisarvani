@@ -1,0 +1,62 @@
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+import java.util.InputMismatchException;
+import java.io.*;
+class Login{ //String Username; //String
+Password; void signin(){
+System.out.println(&quot;*********************************************&quot;);
+System.out.println(&quot;-------- Enter Your Details---------&quot;);
+System.out.println(&quot;*********************************************&quot;);
+//System.out.println(&quot;Username: &quot;+name);
+//System.out.println(&quot;Password: &quot;+password);
+//System.out.println(&quot;&quot;);
+} }
+class User extends Login{
+String Name;
+String city;
+String name; int
+password; int
+age,i,n; String
+address; public
+int j=2;
+
+Scanner in=new Scanner(System.in); Admin
+A1=new Admin();
+public void registration()throws Exception{
+BufferedWriter output=null; File
+fil=new File(&quot;project.txt&quot;);
+if(!fil.exists()){
+fil.createNewFile();
+}
+FileWriter file=new FileWriter(&quot;project.txt&quot;,true);
+Scanner in=new Scanner(System.in); output=new
+BufferedWriter(file); System.out.println(&quot;Enter
+how many voters&quot;); n=in.nextInt();
+for(i=0;i&lt;n;i++){
+System.out.println(&quot;Username: &quot;); name=in.next();
+System.out.println(&quot;Password: &quot;);
+password=in.nextInt();
+if(password==123){
+System.out.println(&quot;enter the voter name&quot;);
+Name=in.next();
+System.out.println(&quot;enter age&quot;);
+age=in.nextInt(); if(age&gt;=18){
+System.out.println(&quot;enter the address&quot;); address=in.next();
+System.out.println(&quot;enter the city&quot;);
+city=in.next(); A1.voting();
+output.write(Name+&quot; &quot;);
+output.write(age+&quot; &quot;);
+output.write(address+&quot; &quot;);
+output.write(city+&quot; &quot;);
+output.newLine();
+} else{
+System.out.println(&quot;age should be more than or equal to 18&quot;); registration();
+} } else
+if(password!=123){
+
+System.out.println(&quot;Enter correct Password&quot;);
+}
+} A1.result();
+output.close();
+}
+}
